@@ -1,33 +1,36 @@
-#content {
-    color: pink;
+  body {
+    color: rgba(28,97,97,.6);
     font-size: 40px;
-    background-color: white;
+    font-family: 'Volkhov', serif;
     text-align: center;
+    background: linear-gradient(45deg, rgb(230, 249, 255), rgba(71,249,249,.2));
   }
 
   h1 {
-    color: pink;
+    color:  rgba(28,97,97,.9);
     font-size: 30px;
-    background-color: white;
+    background-color: transparent;
     height: 60px;
     margin: 20px;
   }
 
   #input {
-    background-color: transparent;
+    background-color: white;
     width: 275px;;
     border: grey solid 1px;
     display: block;
     margin: auto;
-    height: 100px;
-    font-size: 20px;
+    height: 150px;
+    font-size: 30px;
+    border-radius: 5%;
   }
 
   .bt {
     height: 60px;
     width: 60px;
     text-align: center;
-    background-color: transparent;
+    background-color: white;
+    border-radius: 10%;
   }
 
   .img {

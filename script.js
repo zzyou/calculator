@@ -64,26 +64,6 @@ $(document).ready(function() {
     $("#input").html(result);
   });
 
-  $("#plus").click(() => {
-    result.push("+");
-    $("#input").html(result);
-  });
-
-  $("#minus").click(() => {
-    result.push("-");
-    $("#input").html(result);
-  });
-
-  $("#divid").click(() => {
-    result.push("/");
-    $("#input").html(result);
-  });
-
-  $("#X").click(() => {
-    result.push("X");
-    $("#input").html(result);
-  });
-
   function calculation() {
     for (let i = 0; i < result.length; i++) {
       if (isNaN(parseInt(result[i])) && (result[i] !== ".") && (i !== result.length -1)) {
@@ -106,14 +86,44 @@ $(document).ready(function() {
         else if (operator === "X") {
           finalNum = parseFloat(num1) * parseFloat(num2);
         }
+
+        result[0]=finalNum;
+
+        if (result[1] === "=") {
+          result.pop();
+        }
       }
     }
   }
 
+  $("#plus").click(() => {
+    result.push("+");
+    calculation();
+    $("#input").html(result);
+  });
+
+  $("#minus").click(() => {
+    result.push("-");
+    calculation();
+    $("#input").html(result);
+  });
+
+  $("#divid").click(() => {
+    result.push("/");
+    calculation();
+    $("#input").html(result);
+  });
+
+  $("#X").click(() => {
+    result.push("X");
+    calculation();
+    $("#input").html(result);
+  });
+
   $("#equal").click(() => {
     result.push("=");
     calculation();
-    $("#input").append("=" + finalNum);
+    $("#input").html(result);
   });
 
 });
