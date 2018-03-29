@@ -80,7 +80,7 @@ $(document).ready(function() {
         }
   
         else if (operator === "/") {
-          finalNum = (parseFloat(num1) / parseFloat(num2)).toFixed(5);
+          finalNum = (parseFloat(num1) / parseFloat(num2)).toFixed(2);
         }
   
         else if (operator === "X") {
